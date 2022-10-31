@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Este script necesita correr la parte anterior para que exista el .csv
+
 mele=$(cat personajes.csv | awk -F"," '{print$2}' | sed 's_/_and_g' | grep -w M | wc -l)
 range=$(cat personajes.csv | awk -F"," '{print$2}' | sed 's_/_and_g' | grep -w R | wc -l)
 rangeAndMele=$(cat personajes.csv | awk -F"," '{print$2}' | sed 's_/_and_g' | grep -w RandM | wc -l)
