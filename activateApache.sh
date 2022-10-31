@@ -6,4 +6,5 @@ if [[ $chequeoActivo -ge 1 ]]; then
     echo "Apache activo"
 else
     echo "Apache inactivo"
+    sudo systemctl start apache2
 fi
