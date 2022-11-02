@@ -29,7 +29,8 @@ echo "$(cat personajes_lol | shuf | head -n 7)"
 # 3 - Modificar todos los espacios por ", (coma)" del archivo y guardarlo en un nuevo que se llame "lista_personajes_csv"
 
 #Convierte todos los espacios consecutivos en comas
-#Se encuentra un problem con el personaje Twisted Fate (linea 105) ya que tiene un espacio en su nombre
+#Se encuentra un problema con el personaje Twisted Fate (linea 105) ya que tiene un espacio en su nombre
+#Modifiqué el nombre Twisted Fate para que no tenga un espacio
 
 cat personajes_lol | sed 's/\s/,/g' > personajes.csv
 
@@ -46,3 +47,5 @@ echo "Total personajes de range y mele: $rangeAndMele"
 
 #La suma de los totales no es la misma que la cantidad de nombres en el archivo (falta 1) ya que en la columna 2
 #del nombre Twisted Fate (linea 105) se encuentra la palabra Fate
+
+#Al arreglar el nombre el problema anterior se soluciona
